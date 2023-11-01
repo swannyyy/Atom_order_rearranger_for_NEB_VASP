@@ -95,7 +95,7 @@ while True:
         
         
         distances=np.array(distances)
-        # Use the Hungarian algorithm to find the optimal mapping for that type only
+        # Use the Jonker Volgenant algorithm to find the optimal mapping for that type only
         #row_ind, col_ind = linear_sum_assignment(distances)
         result = lap.lapjv(distances)
         row_ind, col_ind = result[1], result[2]
